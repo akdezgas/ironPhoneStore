@@ -1,0 +1,11 @@
+<p>
+  phonelist works!
+</p>
+<div *ngFor = "let phone of phoneList">
+  <p>{{phone.name}}</p>
+  <p>{{phone.brand}}</p>
+  <div *ngFor="let spec of phone.specs">
+    <li>{{spec}}</li>
+  </div>
+
+</div>
