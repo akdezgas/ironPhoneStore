@@ -9,7 +9,7 @@
       <input type="text" name="name" [(ngModel)]="name" />
     </p>
     <p> Img
-        <input type="text" name="image" [(ngModel)]="image" />
+      <input type="file" name="file" ng2FileSelect [uploader]="uploader" />      
     </p>
     <button type="submit"> signup </button>
   </form>

@@ -4,6 +4,6 @@
   <div *ngFor="let spec of phone.specs">
     <li>{{spec}}</li>
   </div>
-  <img id="photo"[src]="phone.image">
+  <img id="photo" [src]="'http://localhost:3000/' + phone.image" >
 
 </div>
