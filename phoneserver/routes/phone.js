@@ -13,15 +13,17 @@ router.post('/new', function(req, res, next) {
     const phone = new Phone({
         name:req.body.name,
         brand:req.body.brand,
-        specs:req.body.specs
+        specs:req.body.specs,
+        image:req.body.image
     })
     phone.save()
         .then(phoneCreated => res.json(phoneCreated))
 })
 
-// router.get('/all', function(req, res, next) {
-//       res.render('index', { title: 'Express' });
-// })
+router.get('/:id', function(req, res, next) {
+    Phone.findById(req.params.id)
+        .then(singlePhone => res.json(singlePhone))
+})
 
 
 module.exports = router;

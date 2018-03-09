@@ -1,11 +1,9 @@
-<p>
-  phonelist works!
-</p>
 <div *ngFor = "let phone of phoneList">
-  <p>{{phone.name}}</p>
-  <p>{{phone.brand}}</p>
+  <h3>{{phone.brand}}</h3>    
+  <a [routerLink]="['/phones', phone._id]"><h2>{{phone.name}}</h2></a>
   <div *ngFor="let spec of phone.specs">
     <li>{{spec}}</li>
   </div>
+  <img id="photo"[src]="phone.image">
 
 </div>

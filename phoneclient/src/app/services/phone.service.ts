@@ -14,7 +14,11 @@ export class PhoneService {
       .map(res => res.json());
   }
   sendNewPhone(phone){
-    return this.http.post('http://localhost:3000/phone/new',phone)
-      .map(res=> res.json())
+    return this.http.post('http://localhost:3000/phone/new', phone)
+      .map(res => res.json());
+  }
+  getSinglePhone(id){
+    return this.http.get(`http://localhost:3000/phone/${id}`)
+    .map(res => res.json());
   }
 }
