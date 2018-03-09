@@ -1,0 +1,10 @@
+<div *ngIf="single">
+
+  <h1>{{single.name}}</h1>
+  <h3>{{single.brand}}</h3>    
+  <div *ngFor="let spec of single.specs">
+    <li>{{spec}}</li>
+  </div>
+  <img id="photo" [src]="single.image">
+
+</div>

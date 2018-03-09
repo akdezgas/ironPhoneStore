@@ -1,0 +1,15 @@
+<p>
+  form-new-phone works!
+</p>
+<form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+    <p> Brand
+      <input type="text" name="brand" [(ngModel)]="brand" />
+    </p>
+    <p> Name
+      <input type="text" name="name" [(ngModel)]="name" />
+    </p>
+    <p> Img
+        <input type="text" name="image" [(ngModel)]="image" />
+    </p>
+    <button type="submit"> signup </button>
+  </form>
