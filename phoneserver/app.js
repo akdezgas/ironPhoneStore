@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -8,8 +9,10 @@ var bodyParser = require('body-parser');
 const phoneController = require ('./routes/phone');
 
 var mongoose = require ('mongoose');
-mongoose.connect("mongodb://localhost/phone-store")
-  .then(console.log("Connected to DB!!!"))
+mongoose.connect(process.env.mongoURL)
+  .then(console.log(`Connected to ${process.env.mongoURL}`))
+
+
 //Importante importar cors para hacer llamadas desde el FronT!!!
 var cors = require('cors');
 

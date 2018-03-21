@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule} from '@angular/router';
 
-import { FileSelectDirective } from "ng2-file-upload";
+
+import { FileUploadModule } from "ng2-file-upload";
+
 import { HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -24,13 +26,13 @@ const routes = [
     AppComponent,
     PhonelistComponent,
     FormNewPhoneComponent,
-    SinglePhoneComponent,
-    FileSelectDirective
+    SinglePhoneComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
+    FileUploadModule,
     RouterModule.forRoot(routes)
   ],
   providers: [PhoneService],
