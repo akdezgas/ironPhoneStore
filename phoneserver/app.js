@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/phone',phoneController)
 
 
-app.all('/*', function (req, res) {
+app.all('/*',  (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
